@@ -43,6 +43,7 @@ Stack: Astro 7 (static output, Vite 8 underneath), TypeScript (Astro strict pres
 - The resume is served from `public/resume.pdf` (`resumePath` in `site.ts`). To update it, overwrite that file; keep the name.
 - Projects can have `tags`, a `status` ("In development" or "Paused") and an external `link`. Cards use a stretched title link (`stretchedLink` in `styles.ts`) so they can contain a second link.
 - The hero Stack line comes from `caseStudy.stack` when set, otherwise from the card's `stack`.
+- The featured homepage card (`FeaturedProjectCard.astro`) shows the card image filling a 4:3 panel when its frame is `plain` (HAVEN uses `cover-haven`); otherwise it shows the first two `phone` case study images. The HAVEN case study hero uses the three app phones (home, activity, bookings).
 - Icons are rendered from `public/favicon.svg` with headless Chrome. Keep `Monogram.astro` and the OG image route in sync with that file if the mark changes.
 
 ## Next steps
@@ -57,6 +58,7 @@ Stack: Astro 7 (static output, Vite 8 underneath), TypeScript (Astro strict pres
 - `gh` is signed into two GitHub accounts. The repo belongs to `FranciscoIturriaga16`; prefix gh and push commands with `GH_TOKEN=$(gh auth token --user FranciscoIturriaga16)` if one fails with "not found" or a permission error.
 - Dev server runs on port 8080 (`npm run dev`). `astro preview` starts in the background and prints its port; stop it with `npx astro preview stop`.
 - Type check with `npm run check` (`astro check`).
+- `npx prettier` does not reindent `.astro` files here (no Astro plugin); format them by hand.
 - Lucide icon components do not accept `hidden`; wrap them in a span to toggle them.
 - Satori (OG images) reads WOFF, not WOFF2, and needs a fixed width on text columns or it overflows.
 - Smooth scrolling makes Playwright full page screenshots catch the sticky header mid scroll; wait for scrolling to settle in tests.
