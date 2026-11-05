@@ -1,5 +1,5 @@
 # Project notes
-_Last updated: 2026-10-30_
+_Last updated: 2026-11-05_
 
 ## What this project is
 Francisco Iturriaga's personal portfolio: a homepage (hero, projects, about, experience, contact) and one case study page per project.
@@ -7,13 +7,14 @@ Stack: Astro 7 (static output, Vite 8 underneath), TypeScript (Astro strict pres
 
 ## Current status
 - Everything is committed and pushed to `main`. Whether the Vercel deploys succeeded has not been checked. `npm run build`, `npm run check` and `npm run lint` pass.
-- All five projects have their final images and case studies, including the redesigned HAVEN images (2026-10-30). The HAVEN case study page ships about 110 to 140 KB of images. Checked with Playwright at 375, 768 and 1440 px: no horizontal scroll, no console errors, images sharp at 2x. Case study pages ship about 85 to 125 KB of images on phones and 85 to 240 KB on desktop.
+- All five projects have their final images and case studies. HAVEN uses real screenshots since 2026-11-05 (live on franciscoiturriaga.com, checked with Playwright at 375, 768 and 1440 px). The live HAVEN case study page loads about 180 to 200 KB of images on phones and about 220 KB on desktop when scrolled to the end. Checked with Playwright at 375, 768 and 1440 px: no horizontal scroll, no console errors, images sharp at 2x. Case study pages ship about 85 to 125 KB of images on phones and 85 to 240 KB on desktop.
 - Earlier Playwright passes (320 to 1440 px and 844x390) covered the menu, filter, Next project cycle, 404 and `/resume.pdf`.
 - `public/resume.pdf` is current (it includes HAVEN and The-Versus).
 - The Vercel project may still be set to the Vite preset; it should use the Astro preset with output `dist`.
 - The `astro-migration` branch is merged and only exists locally.
 
 ## Recent changes
+- 2026-11-05: HAVEN real screenshots. Sources live in `design/haven-screenshots/` (admin, app light and dark, site), kept in git. App phones (`haven-app-home`, `-activity`, `-bookings`, `-payments`) are iPhone simulator captures (1179x2556) resized with ffmpeg Lanczos to 780x1691. `haven-admin.png` is a Playwright capture of admin.havencommunity.app signed in as the owner account (`~/.config/haven/owner-account.env`, never committed), HAVEN Country Club selected, 1440x1000 at DSF 2, with a copy in `design/haven-screenshots/admin/home-country-club-1440.png`. `haven-site.png` is havencommunity.app at 1440x860, DSF 2. `cover-haven.png` is `design/cover-haven.html` rendered at 1200x900, DSF 2 (2400x1800). The Guest passes figure was removed (no capture passed the privacy rule); `haven-app-guests.png` is unused but kept. Phone frames in the case study hero and figures now take their height from the screenshot instead of a fixed aspect ratio, so nothing is cropped.
 - 2026-10-30: HAVEN refresh. New images (`cover-haven`, `haven-site`, `haven-admin`, `haven-app-*` in `src/assets/`); `haven-project.png` and all `haven-folio-*.png` deleted. Case study gained "Design" and "Business model" sections, an "Email" engineering point, figures under "Key features", a new "Where it stands" and a page note. The featured homepage card now shows `cardImage` edge to edge (4:3) when its frame is `plain`, and falls back to the phone pair otherwise.
 - 2026-10-29: New project images (`cover-*`, `versus-*`, `haydn-*`, `bsc-*`, `bemh-*` in `src/assets/`); old images for those four projects deleted. Case study model gained labeled stats (`{ value, label }`), `statements` (quote card list, used for job stories) and a page `note`. Figures now show screens and phones whole instead of cropping (this also changed HAVEN's two screen figures). Cards for the three UX projects are tagged "Flatiron School".
 - 2026-10-29: Section spacing variables in `src/index.css` (`--space-section`, `--space-hero-top`, `--space-hero-bottom`, `--space-block`); phones use 64/48/48/64 px. README has a "Tuning spacing" section.
@@ -22,6 +23,7 @@ Stack: Astro 7 (static output, Vite 8 underneath), TypeScript (Astro strict pres
 - 2026-10-13: Redesign: Geist fonts, dark palette as CSS variables, typed content layer in `src/content/`, homepage and reusable case study template.
 
 ## Decisions
+- HAVEN images may show only the demo clubs (HAVEN Country Club, HAVEN Sports Club, HAVEN Beach Club) and the demo user Alex (Morgan household). No real people or real clubs.
 - All copy and data live in `src/content/` (`site.ts`, `projects.ts`, `caseStudies.ts`, `resume.ts`). Components only render them. Email, LinkedIn, GitHub and resume links come from `site.ts`; homepage SEO is `site.seo`.
 - Copy rule for visible text: no em dashes, en dashes or " - " as separators (write "2024 to Present"), and no hyphenated compounds except the name "The-Versus". Check with `grep -rnE "—|–| - " src`.
 - Design files stay in `design/`, not `public/`, so they never ship.
@@ -48,7 +50,7 @@ Stack: Astro 7 (static output, Vite 8 underneath), TypeScript (Astro strict pres
 
 ## Next steps
 - [ ] In Vercel, set Framework Preset to Astro (build `npm run build`, output `dist`) if it is not already, then check the live site: favicon, link previews, menu on a real phone.
-- [ ] On the live site, look over the new HAVEN images and the single phone figures (HAYDN app home and log in) in their wide boxes.
+- [ ] On the live site, look over the single phone figures (HAYDN app home and log in) in their wide boxes.
 - [ ] Add the GitHub URL in `src/content/site.ts` (`githubUrl`, marked TODO).
 - [ ] Optionally add an About photo in `src/content/site.ts` (`photo`).
 - [ ] Point the franciscoiturriaga.com domain at Vercel if it is not yet; canonical and OG URLs already use it.
