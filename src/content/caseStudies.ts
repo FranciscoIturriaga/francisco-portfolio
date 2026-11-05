@@ -2,6 +2,7 @@ import havenSite from "@/assets/haven-site.png";
 import havenAdmin from "@/assets/haven-admin.png";
 import havenAppBookings from "@/assets/haven-app-bookings.png";
 import havenAppPayments from "@/assets/haven-app-payments.png";
+import havenAppGuests from "@/assets/haven-app-guests.png";
 import versusVote from "@/assets/versus-vote.png";
 import versusAgent from "@/assets/versus-agent.png";
 import versusSquad from "@/assets/versus-squad.png";
@@ -268,6 +269,11 @@ export const caseStudies: CaseStudy[] = [
             image: { src: havenAppPayments, alt: "HAVEN Payments screen for HAVEN Country Club with an overdue balance for the Morgan household, a pay button, the open bill and recent booking payments", frame: "phone" },
             captionTitle: "Payments.",
             caption: "Dues and bills for the household, paid in one tap.",
+          },
+          {
+            image: { src: havenAppGuests, alt: "HAVEN Guest passes screen for HAVEN Country Club with 9 of 10 passes left today, an invite button and a revoked pass for Jordan Lee", frame: "phone" },
+            captionTitle: "Guest passes.",
+            caption: "Invite guests and track passes left this month.",
           },
         ],
       },
