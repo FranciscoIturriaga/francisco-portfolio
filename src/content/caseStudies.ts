@@ -2,7 +2,6 @@ import havenSite from "@/assets/haven-site.png";
 import havenAdmin from "@/assets/haven-admin.png";
 import havenAppBookings from "@/assets/haven-app-bookings.png";
 import havenAppPayments from "@/assets/haven-app-payments.png";
-import havenAppGuests from "@/assets/haven-app-guests.png";
 import versusVote from "@/assets/versus-vote.png";
 import versusAgent from "@/assets/versus-agent.png";
 import versusSquad from "@/assets/versus-squad.png";
@@ -218,14 +217,14 @@ export const caseStudies: CaseStudy[] = [
         lead: "HAVEN is four products that share one TypeScript core: a member app for iOS and Android, an admin dashboard for running the community, a marketing site with public community pages, and secure payment pages.",
         figures: [
           {
-            image: { src: havenSite, alt: "HAVEN marketing site at havencommunity.app", frame: "screen" },
+            image: { src: havenSite, alt: "HAVEN marketing site at havencommunity.app with the headline, an early access badge and the member app home on a phone", frame: "screen" },
             captionTitle: "Marketing site.",
             caption: "Live at havencommunity.app, with pricing, fees and how payments work.",
           },
           {
             image: {
               src: havenAdmin,
-              alt: "HAVEN admin dashboard with items that need attention, today's bookings and monthly totals",
+              alt: "HAVEN admin dashboard for HAVEN Country Club with setup complete, one household past due, today's booking and this month's totals",
               frame: "screen",
             },
             captionTitle: "Admin dashboard.",
@@ -261,19 +260,14 @@ export const caseStudies: CaseStudy[] = [
         ],
         figures: [
           {
-            image: { src: havenAppBookings, alt: "HAVEN Bookings screen with the next booking on top and a list of spaces to book", frame: "phone" },
+            image: { src: havenAppBookings, alt: "HAVEN Bookings screen with today's tennis booking on top and a soccer field and tennis courts to book", frame: "phone" },
             captionTitle: "Bookings.",
             caption: "Book a space, with the next booking always on top.",
           },
           {
-            image: { src: havenAppPayments, alt: "HAVEN Payments screen with the household balance due, a pay button, bills and recent payments", frame: "phone" },
+            image: { src: havenAppPayments, alt: "HAVEN Payments screen for HAVEN Country Club with an overdue balance for the Morgan household, a pay button, the open bill and recent booking payments", frame: "phone" },
             captionTitle: "Payments.",
             caption: "Dues and bills for the household, paid in one tap.",
-          },
-          {
-            image: { src: havenAppGuests, alt: "HAVEN Guest passes screen with passes left, an invite button and the member's upcoming and used passes", frame: "phone" },
-            captionTitle: "Guest passes.",
-            caption: "Invite guests and track passes left this month.",
           },
         ],
       },

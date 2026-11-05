@@ -1,0 +1,48 @@
+<!doctype html>
+<!--
+  HAVEN project cover. Render at 1200x900, deviceScaleFactor 2, to src/assets/cover-haven.png (2400x1800).
+  Sources: haven-screenshots/admin/home-country-club-1440.png (live admin, 2880x2000)
+           haven-screenshots/app/dark/home-country-club.png (iPhone 16 simulator, 1179x2556)
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; width: 1200px; height: 900px; overflow: hidden; }
+  body {
+    position: relative;
+    background:
+      radial-gradient(ellipse 760px 520px at 8% -6%, rgba(34, 140, 72, 0.55), transparent 70%),
+      radial-gradient(ellipse 640px 520px at 104% 100%, rgba(28, 110, 58, 0.45), transparent 70%),
+      linear-gradient(160deg, #0b1a12 0%, #060a08 55%, #07100b 100%);
+  }
+  .window {
+    position: absolute; left: 70px; top: 110px; width: 940px;
+    border-radius: 18px; overflow: hidden;
+    background: #111614;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+  .bar { height: 30px; display: flex; align-items: center; gap: 8px; padding-left: 14px; background: #161c19; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+  .bar i { width: 10px; height: 10px; border-radius: 50%; background: #2d3531; }
+  .window img { display: block; width: 100%; }
+  .phone {
+    position: absolute; left: 828px; top: 330px; width: 302px;
+    padding: 10px; border-radius: 54px;
+    background: #1b1f1d;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.7), 0 0 0 2px #0a0c0b inset, -16px 0 40px rgba(0, 0, 0, 0.45);
+  }
+  .phone img { display: block; width: 100%; border-radius: 44px; }
+</style>
+</head>
+<body>
+  <div class="window">
+    <div class="bar"><i></i><i></i><i></i></div>
+    <img src="haven-screenshots/admin/home-country-club-1440.png" alt="">
+  </div>
+  <div class="phone">
+    <img src="haven-screenshots/app/dark/home-country-club.png" alt="">
+  </div>
+</body>
+</html>

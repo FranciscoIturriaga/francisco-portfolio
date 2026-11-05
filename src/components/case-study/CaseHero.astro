@@ -16,12 +16,11 @@ interface Props {
   number: string;
 }
 
-/** Phone sizes from the design: the middle phone is slightly larger. */
-const phoneSizes = [
-  "max-w-[220px] aspect-[220/460]",
-  "max-w-[240px] aspect-[240/500]",
-  "max-w-[220px] aspect-[220/460] hidden sm:block",
-];
+/**
+ * Phone widths from the design: the middle phone is slightly larger.
+ * Height follows the screenshot, so a phone is never cropped.
+ */
+const phoneSizes = ["max-w-[220px]", "max-w-[240px]", "max-w-[220px] hidden sm:block"];
 
 const { project, caseStudy, number } = Astro.props;
 const images = project.caseStudyImages;

@@ -62,7 +62,7 @@ export const statusDots: Record<ProjectStatus, "amber" | "muted"> = {
 };
 
 const havenCoverAlt =
-  "HAVEN admin dashboard on a laptop with items that need attention and today's bookings, next to the member app home for the same community";
+  "HAVEN admin dashboard for HAVEN Country Club in a desktop window, with setup complete, a past due household and this month's totals, next to the member app home in dark mode for the same club";
 const versusCoverAlt =
   "The-Versus on a laptop, showing a Messi versus Cristiano matchup voted factor by factor, next to a phone chat where the agent proposes new matchups";
 const haydnCoverAlt =
@@ -86,9 +86,9 @@ export const projects: Project[] = [
     link: { url: "https://havencommunity.app", label: "havencommunity.app" },
     cardImage: { src: havenCover, alt: havenCoverAlt, frame: "plain" },
     caseStudyImages: [
-      { src: havenAppHome, alt: "HAVEN member app home with the community card and shortcuts for bookings, guests, events and announcements", frame: "phone" },
-      { src: havenAppActivity, alt: "HAVEN Activity screen with a week calendar and the day's bookings, guests and events across communities", frame: "phone" },
-      { src: havenAppBookings, alt: "HAVEN Bookings screen with the next booking on top and spaces to book", frame: "phone" },
+      { src: havenAppHome, alt: "HAVEN member app home for HAVEN Country Club greeting Alex, with cards for the next tennis booking, guest passes, a yoga class and a pool announcement", frame: "phone" },
+      { src: havenAppActivity, alt: "HAVEN Activity screen with an overdue payment alert, a week calendar for November and today's tennis booking at HAVEN Country Club", frame: "phone" },
+      { src: havenAppBookings, alt: "HAVEN Bookings screen with today's tennis booking on top and a soccer field and tennis courts to book", frame: "phone" },
     ],
   },
   {
